@@ -5,12 +5,17 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.halloweenlabs.sticks.models.Game;
+
 public class GameActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+
+        GameView gameView = (GameView)findViewById(R.id.gameView);
+        gameView.setGame(new Game(5));
     }
 
     @Override
